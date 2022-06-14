@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="vm"
+            type="gilbert.assessment.gilbertaccentureassessment.ui.fragment.userDetail.UserDetailViewModel" />
+    </data>
+
+   <androidx.appcompat.widget.LinearLayoutCompat
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:id="@+id/llcMain"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:visibility="gone">
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@color/light_blue_500"
+               android:orientation="horizontal"
+               android:padding="@dimen/size16">
+
+               <TextView
+                   android:id="@+id/tvToolbarName"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/user"
+                   android:textSize="@dimen/text20"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:layout_gravity="center"
+                   android:layout_marginStart="@dimen/size16"/>
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:padding="@dimen/size16"
+               android:orientation="vertical">
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                   <de.hdodenhof.circleimageview.CircleImageView
+                       android:id="@+id/civProfile"
+                       android:layout_width="@dimen/size72"
+                       android:layout_height="@dimen/size72"/>
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="horizontal"
+                       android:layout_marginStart="@dimen/size16">
+
+                       <androidx.appcompat.widget.LinearLayoutCompat
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_weight="1"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:id="@+id/tvFollowing"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/following"
+                               android:textSize="@dimen/text16"
+                               android:textColor="@color/black"
+                               android:textStyle="bold"
+                               android:layout_gravity="center"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/following"
+                               android:textSize="@dimen/text16"
+                               android:textColor="@color/grey_600"
+                               android:layout_marginTop="@dimen/size4"
+                               android:layout_gravity="center"/>
+                       </androidx.appcompat.widget.LinearLayoutCompat>
+
+                       <androidx.appcompat.widget.LinearLayoutCompat
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_weight="1"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:id="@+id/tvFollowers"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/followers"
+                               android:textSize="@dimen/text16"
+                               android:textColor="@color/black"
+                               android:textStyle="bold"
+                               android:layout_gravity="center"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/followers"
+                               android:textSize="@dimen/text16"
+                               android:textColor="@color/grey_600"
+                               android:layout_marginTop="@dimen/size4"
+                               android:layout_gravity="center"/>
+                       </androidx.appcompat.widget.LinearLayoutCompat>
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_marginTop="@dimen/size8"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/name"
+                       android:textSize="@dimen/text16"
+                       android:textColor="@color/grey_500"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:id="@+id/tvName"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/name"
+                       android:textSize="@dimen/text18"
+                       android:textColor="@color/black"
+                       android:textStyle="bold"
+                       android:layout_marginTop="@dimen/size4"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/company"
+                       android:textSize="@dimen/text16"
+                       android:textColor="@color/grey_500"
+                       android:textStyle="bold"
+                       android:layout_marginTop="@dimen/size12"/>
+
+                   <TextView
+                       android:id="@+id/tvCompany"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/company"
+                       android:textSize="@dimen/text18"
+                       android:textColor="@color/black"
+                       android:textStyle="bold"
+                       android:layout_marginTop="@dimen/size4"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/joined_at"
+                       android:textSize="@dimen/text16"
+                       android:textColor="@color/grey_500"
+                       android:textStyle="bold"
+                       android:layout_marginTop="@dimen/size12"/>
+
+                   <TextView
+                       android:id="@+id/tvJoinedAt"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/joined_at"
+                       android:textSize="@dimen/text18"
+                       android:textColor="@color/black"
+                       android:textStyle="bold"
+                       android:layout_marginTop="@dimen/size4"/>
+               </androidx.appcompat.widget.LinearLayoutCompat>
+           </androidx.appcompat.widget.LinearLayoutCompat>
+       </androidx.appcompat.widget.LinearLayoutCompat>
+
+       <include
+           android:id="@+id/iLoading"
+           layout="@layout/view_loading_layout"/>
+   </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

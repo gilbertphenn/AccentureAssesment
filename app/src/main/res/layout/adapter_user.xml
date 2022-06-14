@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/size16"
+        android:layout_marginStart="@dimen/size2"
+        android:layout_marginEnd="@dimen/size2"
+        android:layout_marginBottom="@dimen/size8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="@dimen/size16">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civProfile"
+                android:layout_width="@dimen/size64"
+                android:layout_height="@dimen/size64" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user"
+                    android:textSize="@dimen/text16"
+                    android:textColor="@color/grey_800"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/link"
+                    android:textSize="@dimen/text14"
+                    android:textColor="@color/grey_800"
+                    android:layout_marginTop="@dimen/size4"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

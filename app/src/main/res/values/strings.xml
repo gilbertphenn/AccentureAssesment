@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Gilbert Accenture Assessment</string>
+
+    <!--Main Activity-->
+    <string name="search">Search</string>
+    <string name="user">User</string>
+    <string name="link">Link</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="name">Name:</string>
+    <string name="company">Company:</string>
+    <string name="joined_at">Joined At:</string>
+</resources>

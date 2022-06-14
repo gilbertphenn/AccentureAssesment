@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/usersListFragment">
+
+    <fragment android:id="@+id/usersListFragment"
+        android:name="gilbert.assessment.gilbertaccentureassessment.ui.fragment.userList.UserList"
+        tools:layout="@layout/fragment_user_list">
+
+        <action android:id="@+id/action_usersListFragment_to_singleUserFragment"
+            app:destination="@id/singleUserFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/singleUserFragment"
+        android:name="gilbert.assessment.gilbertaccentureassessment.ui.fragment.userDetail.UserDetail"
+        tools:layout="@layout/fragment_user_detail">
+
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+</navigation>
